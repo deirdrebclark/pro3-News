@@ -3,7 +3,7 @@
 
 Summary
 
-Team members: Jerome Pelham, Deidre Clark, Sirajuddin Pirzada, Heather Saul
+Team members: Jerome Pelham, Deirdre Clark, Sirajuddin Pirzada, Heather Saul
 
 Our team is interested in using data analysis tools to look at potential associations between standard news outlet coverage of events and stock market behavior. In this case we will be focusing on Coronavirus as our primary query. 
 
