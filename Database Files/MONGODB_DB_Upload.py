@@ -25,34 +25,7 @@
   },
   {
    "cell_type": "code",
-<<<<<<< HEAD
    "execution_count": 3,
-=======
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import json\n",
-    "from pymongo import MongoClient\n",
-    "\n",
-    "client = MongoClient('localhost', 27017)\n",
-    "db = client['pro3news']\n",
-    "collection= db['keywords']\n",
-    "\n",
-    "with open('word_counts.json') as g:\n",
-    "    file_data = json.load(g)\n",
-    "\n",
-    "# if pymongo >= 3.0 use insert_one() for inserting one document\n",
-    "collection.insert_one(file_data)\n",
-    "\n",
-    "\n",
-    "client.close()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 1,
->>>>>>> 9c73f7b54f81f9b3eb041b4f96526a187c59da37
    "metadata": {},
    "outputs": [],
    "source": [

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Pro3 News</title>
+</head>
+<body class="hold-transition sidebar-mini">
+
+  <div>
+    {% for newspaper in shares %}
+      <h3>{{newspaper.newspaper}}</h3>
+      <h3>{{newspaper.date}}</h3>
+      <h3>{{newspaper.url}}</h3>
+      <h3>{{newspaper.title}}</h3>
+      <h3>{{newspaper.shares}}</h3>
+    {% endfor %}
+    
+  </div>
+  <script>var data = '{{shares}}'</script>
+  <script src = 'static\js\shares.js'></script>
+</body>
+</html>
