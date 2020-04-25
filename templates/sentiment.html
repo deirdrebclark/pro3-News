@@ -8,12 +8,12 @@
 <body class="hold-transition sidebar-mini">
 
   <div>
-    {% for newspaper in shares %}
-      <h3>{{sentiment.newspaper}}</h3>
-      <h3>{{sentiment.date}}</h3>
-      <h3>{{sentiment.sentiment}}</h3>
-      <h3>{{sentiment.title}}</h3>
-      <h3>{{sentiment.shares}}</h3>
+    {% for data in sentiment %}
+      <h3>{{data.newspaper}}</h3>
+      <h3>{{data.date}}</h3>
+      <h3>{{data.sentiment}}</h3>
+      <h3>{{data.title}}</h3>
+      
     {% endfor %}
     
   </div>
