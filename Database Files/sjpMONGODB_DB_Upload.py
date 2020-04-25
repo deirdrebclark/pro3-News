@@ -25,25 +25,16 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 6,
    "metadata": {},
-   "outputs": [
-    {
-     "output_type": "error",
-     "ename": "SyntaxError",
-     "evalue": "invalid character in identifier (<ipython-input-1-14acf643cc69>, line 3)",
-     "traceback": [
-      "\u001b[1;36m  File \u001b[1;32m\"<ipython-input-1-14acf643cc69>\"\u001b[1;36m, line \u001b[1;32m3\u001b[0m\n\u001b[1;33m    client = MongoClient(‘localhost’, 27017)\u001b[0m\n\u001b[1;37m                                   ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid character in identifier\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "import json\n",
     "from pymongo import MongoClient\n",
-    "client = MongoClient(‘localhost’, 27017)\n",
-    "db = client[‘pro3news’]\n",
-    "collection= db[‘sentiment’]\n",
-    "with open(‘sentiment_all.json’) as g:\n",
+    "client = MongoClient('localhost', 27017)\n",
+    "db = client['pro3news']\n",
+    "collection= db['sentiment']\n",
+    "with open('sentiment_all.json') as g:\n",
     "    file_data = json.load(g)\n",
     "# if pymongo >= 3.0 use insert_one() for inserting one document\n",
     "collection.insert_one(file_data)\n",
