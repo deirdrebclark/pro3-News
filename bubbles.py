@@ -9,12 +9,12 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/pro3news"
 mongo = PyMongo(app)
 
 
-@app.route("/wordclouds")
+@app.route("/keywords")
 def index():
-    keywords = mongo.db.wordclouds.find()
+    keywords = mongo.db.keywords.find()
     for item in keywords:
         print(item)
-    return render_template("keywords.html", keywords=keywords)
+    return render_template("bubbles.html", keywords=keywords)
 
 
 if __name__ == "__main__":
