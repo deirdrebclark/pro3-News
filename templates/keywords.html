@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Event Dashboard: Coronavirus</title>
+        <link
+          href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu"
+          crossorigin="anonymous"
+        />
+      </head>
+
+      <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+              <h1>Event Dashboard: Coronavirus</h1>
+              <p>An NLP exploration of Coronavirus news data and stock market behavior</p>
+            </div>
+          </div>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+               
+                  
+                  <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587511486/Word%20Cloud/2BB_ywimvl.png">Breitbart</option>
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587507729/Word%20Cloud/15BI_fzj30s.png">Business Insider</option>
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587507732/Word%20Cloud/24BI_midhdp.png">Fox News</option>
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587507737/Word%20Cloud/58MW_lz4jio.png">MarketWatch</option>
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587507740/Word%20Cloud/70NY_s8ex8k.png">NY Times</option>
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587507747/Word%20Cloud/84RE_v5l0ci.png">Reuters</option>
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587507752/Word%20Cloud/98GD_s2ykek.png">The Guardian</option>
+                      <option value="https://res.cloudinary.com/dq49yzr5o/image/upload/v1587507758/Word%20Cloud/114WS_txrzgz.png">Wall Street Journal</option>
+                  </select>
+                    
+                  <br><br>
+                  
+                  <img id="imageToSwap" class="profile" src="http://cdns2.freepik.com/free-photo/facebook-logo_318-49940.jpg">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="static/js/app.js"></script>
+      </body>
+    </html>
+  </head>
+</html>
