@@ -3,6 +3,8 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import plotly
+from bson.json_util import dumps
+import json
 
 
 app = Flask(__name__)

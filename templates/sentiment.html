@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
-  <meta charset="utf-8">
-  <title>Pro3 News</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Pro3 News</title>
 </head>
+
 <body class="hold-transition sidebar-mini">
-  <div>
-    {{ chart|safe }}
-  </div>
+    <!-- <div>
+        {% for data in sentiment %}
+        {{data}}
+        <h3>{{data.newspaper}}</h3>
+        <p>{{data.date}}</p>
+        <p>{{data.sentiment}}</p>
+        <p>{{data.title}}</p>
 
-
-  <div>
-    {% for data in sentiment %}
-      <h3>{{data.newspaper}}</h3>
-      <p>{{data.date}}</p>
-      <p>{{data.sentiment}}</p>
-      <p>{{data.title}}</p>
-      
-    {% endfor %}
+        {% endfor %}
+    </div> -->
+    <div id="myDiv"></div>
     
-<!-- Scatter plot -->
-<!-- used this as reference: 
-    https://blog.sneawo.com/blog/2019/01/24/easy-charts-in-python-app-with-plotly/?fbclid=IwAR0gtvsLA45irMvGXzxes72-3K37aPj5LJfK_r452SAng0uQryXPN3JwFPc -->
-
-  </div>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-  <script>var data = '{{sentiment}}'
-  </script>
-  <script src = 'static\js\sentiment.js'></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script>var data = '{{sentiment}}'
+    </script>
+    <script src='static\js\sentiment.js'></script>
 </body>
-</html>
 
+</html>
