@@ -1,58 +1,20 @@
-<!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Pro3 News</title>
-        <link
-          href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu"
-          crossorigin="anonymous"
-        />
-        <style> 
-          img { 
-            max-width: 50%;
-          } 
-        </style>
-      </head>
+<head>
+    <link rel="stylesheet" href="index.css"></link>
+</head>
 
-      <body>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 jumbotron text-center">
-                <h1>Pro3 News</h1>
-                <h2>EVENT DASHBOARD: Coronavirus</h2>
-                <p>An NLP exploration of Coronavirus news data and stock market behavior</p>
-                <div class="col-xs-6 col-sm-6 col-md-6 text=left">
-                    <h2>Team Members</h2>
-                    <h4>Jerome Pelham, Deirdre Clark, Sirajuddin Pirzada, Heather Saul</h4>
-                   <br><br>
-                    <h2>Acknowledgements</h2>
-                    <h5>Ryan Boris, Richa Prakash, Earnest Long Jr., Guga Gogia</h5>
-                </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 text = right">
-                    <h5>Data Sources</h5>
-                    <p>EventRegistry (news), Alpha Vantage (stocks)</p>
-                    <h5>Data extraction, organization, and cleaning</h5>
-                    <p>Python, Flask, Pandas, Newspaper, NLTK, WordCloud, TextBlob, Excel</p>
-                    <h5>Visualization</h5>
-                    <p>HTML, CSS, Bootstrap, JavaScript, D3, Vega-Lite, React, Chartjs</p>
-                    <h5>Database</h5>
-                    <p>MongoDB</p>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <p></p>
-            </div>
-          </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="static/js/app.js"></script>
-      </body>
+<body>
+    <select id="left">
+        </select>
+    <select id="right">
+      </select>
+    <button onclick="window.showData()"> show </button>
 
+    <div id="g-chart">
+    </div>
+    <script src="d3.v2.min.js"></script>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+    <div> Credit: The New York Times https://archive.nytimes.com/www.nytimes.com/interactive/2012/09/06/us/politics/convention-word-counts.html#bailout
+    </div>
+</body>
 
-</html>
