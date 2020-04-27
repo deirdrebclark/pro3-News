@@ -140,7 +140,6 @@ var data = {
     "137": "wildlife",
     "138": "Biden",
   },
-
   Reuters: {
     "0": 153,
     "1": 33,
@@ -423,7 +422,147 @@ var data = {
     "137": 2,
     "138": 6,
   },
-
+  "The Guardian": {
+    "0": 107,
+    "1": 56,
+    "2": 43,
+    "3": 84,
+    "4": 5,
+    "5": 23,
+    "6": 56,
+    "7": 40,
+    "8": 14,
+    "9": 19,
+    "10": 36,
+    "11": 1,
+    "12": 24,
+    "13": 13,
+    "14": 14,
+    "15": 11,
+    "16": 25,
+    "17": 4,
+    "18": 2,
+    "19": 21,
+    "20": 7,
+    "21": 13,
+    "22": 20,
+    "23": 22,
+    "24": 21,
+    "25": 23,
+    "26": 19,
+    "27": 7,
+    "28": 2,
+    "29": 0,
+    "30": 2,
+    "31": 22,
+    "32": 17,
+    "33": 2,
+    "34": 4,
+    "35": 6,
+    "36": 13,
+    "37": 13,
+    "38": 11,
+    "39": 9,
+    "40": 3,
+    "41": 0,
+    "42": 6,
+    "43": 3,
+    "44": 12,
+    "45": 6,
+    "46": 19,
+    "47": 12,
+    "48": 5,
+    "49": 13,
+    "50": 15,
+    "51": 7,
+    "52": 6,
+    "53": 14,
+    "54": 4,
+    "55": 7,
+    "56": 0,
+    "57": 7,
+    "58": 5,
+    "59": 1,
+    "60": 8,
+    "61": 2,
+    "62": 7,
+    "63": 14,
+    "64": 3,
+    "65": 7,
+    "66": 2,
+    "67": 2,
+    "68": 9,
+    "69": 13,
+    "70": 13,
+    "71": 1,
+    "72": 9,
+    "73": 7,
+    "74": 4,
+    "75": 23,
+    "76": 0,
+    "77": 4,
+    "78": 24,
+    "79": 3,
+    "80": 1,
+    "81": 5,
+    "82": 4,
+    "83": 9,
+    "84": 3,
+    "85": 4,
+    "86": 4,
+    "87": 10,
+    "88": 6,
+    "89": 9,
+    "90": 9,
+    "91": 14,
+    "92": 8,
+    "93": 5,
+    "94": 3,
+    "95": 3,
+    "96": 1,
+    "97": 4,
+    "98": 0,
+    "99": 3,
+    "100": 8,
+    "101": 2,
+    "102": 4,
+    "103": 1,
+    "104": 2,
+    "105": 0,
+    "106": 3,
+    "107": 6,
+    "108": 3,
+    "109": 3,
+    "110": 3,
+    "111": 3,
+    "112": 0,
+    "113": 0,
+    "114": 10,
+    "115": 2,
+    "116": 2,
+    "117": 8,
+    "118": 2,
+    "119": 1,
+    "120": 6,
+    "121": 5,
+    "122": 5,
+    "123": 6,
+    "124": 0,
+    "125": 17,
+    "126": 5,
+    "127": 2,
+    "128": 2,
+    "129": 1,
+    "130": 1,
+    "131": 10,
+    "132": 8,
+    "133": 1,
+    "134": 3,
+    "135": 5,
+    "136": 15,
+    "137": 8,
+    "138": 0,
+  },
   "NY Times": {
     "0": 86,
     "1": 52,
@@ -565,334 +704,145 @@ var data = {
     "137": 2,
     "138": 1,
   },
+  Breitbart: {
+    "0": 206,
+    "1": 67,
+    "2": 31,
+    "3": 58,
+    "4": 12,
+    "5": 42,
+    "6": 62,
+    "7": 26,
+    "8": 2,
+    "9": 32,
+    "10": 23,
+    "11": 4,
+    "12": 17,
+    "13": 13,
+    "14": 26,
+    "15": 27,
+    "16": 11,
+    "17": 2,
+    "18": 1,
+    "19": 20,
+    "20": 7,
+    "21": 25,
+    "22": 15,
+    "23": 23,
+    "24": 12,
+    "25": 6,
+    "26": 12,
+    "27": 19,
+    "28": 1,
+    "29": 0,
+    "30": 6,
+    "31": 16,
+    "32": 15,
+    "33": 3,
+    "34": 4,
+    "35": 1,
+    "36": 3,
+    "37": 10,
+    "38": 12,
+    "39": 6,
+    "40": 8,
+    "41": 0,
+    "42": 2,
+    "43": 4,
+    "44": 15,
+    "45": 7,
+    "46": 12,
+    "47": 6,
+    "48": 7,
+    "49": 7,
+    "50": 14,
+    "51": 6,
+    "52": 1,
+    "53": 9,
+    "54": 4,
+    "55": 3,
+    "56": 10,
+    "57": 3,
+    "58": 2,
+    "59": 0,
+    "60": 17,
+    "61": 1,
+    "62": 8,
+    "63": 2,
+    "64": 6,
+    "65": 3,
+    "66": 8,
+    "67": 3,
+    "68": 9,
+    "69": 4,
+    "70": 16,
+    "71": 10,
+    "72": 3,
+    "73": 5,
+    "74": 10,
+    "75": 4,
+    "76": 0,
+    "77": 3,
+    "78": 9,
+    "79": 0,
+    "80": 0,
+    "81": 0,
+    "82": 2,
+    "83": 5,
+    "84": 4,
+    "85": 28,
+    "86": 6,
+    "87": 9,
+    "88": 2,
+    "89": 2,
+    "90": 6,
+    "91": 3,
+    "92": 2,
+    "93": 1,
+    "94": 3,
+    "95": 3,
+    "96": 9,
+    "97": 11,
+    "98": 2,
+    "99": 1,
+    "100": 7,
+    "101": 1,
+    "102": 5,
+    "103": 13,
+    "104": 3,
+    "105": 0,
+    "106": 3,
+    "107": 1,
+    "108": 3,
+    "109": 6,
+    "110": 5,
+    "111": 8,
+    "112": 0,
+    "113": 1,
+    "114": 0,
+    "115": 0,
+    "116": 1,
+    "117": 1,
+    "118": 8,
+    "119": 15,
+    "120": 4,
+    "121": 5,
+    "122": 12,
+    "123": 9,
+    "124": 1,
+    "125": 5,
+    "126": 0,
+    "127": 3,
+    "128": 5,
+    "129": 11,
+    "130": 3,
+    "131": 5,
+    "132": 9,
+    "133": 4,
+    "134": 1,
+    "135": 0,
+    "136": 10,
+    "137": 0,
+    "138": 9,
+  },
 };
-
-var showData = function () {
-  //document is also global, but a subset of windows. you can grab stuff from html file using document.
-  //the value of select corresponds to the value chosen on the website. left corresponds left in html. this allows
-  //assigning values. this differs from nyt. there it is generated every time you click on show.
-  var left = document.getElementById("left").value;
-  var right = document.getElementById("right").value;
-  var html_to_insert =
-    '<div class="g-labels"></div>    <svg class="g-nodes" width="1070" height="640"></svg>';
-
-  // innerHTML is stuff inside select id (in html file)
-  document.getElementById("g-chart").innerHTML = html_to_insert;
-
-  var width = 1040,
-    height = 640;
-
-  var collisionPadding = 4,
-    clipPadding = 4,
-    minRadius = 16, // minimum collision radius
-    maxRadius = 65; // currently-displayed topic
-
-  var formatShortCount = d3.format(",.0f");
-
-  var max = 0;
-  for (var i in data.words) {
-    var sum = data[left][i] + data[right][i];
-    if (max < sum) max = sum;
-  }
-
-  var r = d3.scale.sqrt().domain([0, max]).range([0, maxRadius]);
-
-  var force = d3.layout
-    .force()
-    .charge(0)
-    .size([width, height - 80])
-    .on("tick", tick);
-
-  var node = d3.select(".g-nodes").selectAll(".g-node"),
-    label = d3.select(".g-labels").selectAll(".g-label"),
-    arrow = d3.select(".g-nodes").selectAll(".g-note-arrow");
-
-  d3.select(".g-nodes")
-    .append("rect")
-    .attr("class", "g-overlay")
-    .attr("width", width)
-    .attr("height", height)
-    .on("click", clear);
-
-  update();
-
-  window.update = update;
-
-  // Update the known topics.
-  function update() {
-    data.display = [];
-
-    for (var w in data.words) {
-      var leftCount = data[left][w];
-      var rightCount = data[right][w];
-      var totalCount = leftCount + rightCount;
-
-      var d = {};
-      d.id = w;
-      d.count = totalCount;
-      d.left = leftCount;
-      d.right = rightCount;
-      d.name = data.words[w];
-      d.r = r(totalCount);
-      d.cr = Math.max(minRadius, d.r);
-      d.k = fraction(leftCount, rightCount);
-      if (isNaN(d.k)) d.k = 0.5;
-      if (isNaN(d.x)) d.x = (1 - d.k) * width + Math.random();
-      d.bias = 0.5 - Math.max(0.1, Math.min(0.9, d.k));
-      data.display.push(d);
-    }
-
-    force.nodes(data.display).start();
-    updateNodes();
-    updateLabels();
-  }
-
-  // Update the displayed nodes.
-  function updateNodes() {
-    node = node.data(data.display, function (d) {
-      return d.name;
-    });
-
-    node.exit().remove();
-    var nodeEnter = node
-      .enter()
-      .append("a")
-      .attr("class", "g-node")
-      .attr("xlink:href", function (d) {
-        return "#" + encodeURIComponent(d.name);
-      })
-      .call(force.drag);
-
-    var leftEnter = nodeEnter.append("g").attr("class", "g-left");
-
-    leftEnter
-      .append("clipPath")
-      .attr("id", function (d) {
-        return "g-clip-left-" + d.id;
-      })
-      .append("rect");
-
-    leftEnter.append("circle");
-
-    var rightEnter = nodeEnter.append("g").attr("class", "g-right");
-
-    rightEnter
-      .append("clipPath")
-      .attr("id", function (d) {
-        return "g-clip-right-" + d.id;
-      })
-      .append("rect");
-
-    rightEnter.append("circle");
-
-    nodeEnter.append("line").attr("class", "g-split");
-
-    node
-      .selectAll("rect")
-      .attr("y", function (d) {
-        return -d.r - clipPadding;
-      })
-      .attr("height", function (d) {
-        return 2 * d.r + 2 * clipPadding;
-      });
-
-    node
-      .select(".g-left rect")
-      .style("display", function (d) {
-        return d.k > 0 ? null : "none";
-      })
-      .attr("x", function (d) {
-        return -d.r - clipPadding;
-      })
-      .attr("width", function (d) {
-        return 2 * d.r * d.k + clipPadding;
-      });
-
-    node
-      .select(".g-right rect")
-      .style("display", function (d) {
-        return d.k < 1 ? null : "none";
-      })
-      .attr("x", function (d) {
-        return -d.r + 2 * d.r * d.k;
-      })
-      .attr("width", function (d) {
-        return 2 * d.r;
-      });
-
-    node.select(".g-left circle").attr("clip-path", function (d) {
-      return d.k < 1 ? "url(#g-clip-left-" + d.id + ")" : null;
-    });
-
-    node.select(".g-right circle").attr("clip-path", function (d) {
-      return d.k > 0 ? "url(#g-clip-right-" + d.id + ")" : null;
-    });
-
-    node
-      .select(".g-split")
-      .attr("x1", function (d) {
-        return -d.r + 2 * d.r * d.k;
-      })
-      .attr("y1", function (d) {
-        return -Math.sqrt(d.r * d.r - Math.pow(-d.r + 2 * d.r * d.k, 2));
-      })
-      .attr("x2", function (d) {
-        return -d.r + 2 * d.r * d.k;
-      })
-      .attr("y2", function (d) {
-        return Math.sqrt(d.r * d.r - Math.pow(-d.r + 2 * d.r * d.k, 2));
-      });
-
-    node.selectAll("circle").attr("r", function (d) {
-      return r(d.count);
-    });
-  }
-
-  // Update the displayed node labels.
-  function updateLabels() {
-    label = label.data(data.display, function (d) {
-      return d.name;
-    });
-
-    label.exit().remove();
-
-    var labelEnter = label
-      .enter()
-      .append("a")
-      .attr("class", "g-label")
-      .attr("href", function (d) {
-        return "#" + encodeURIComponent(d.name);
-      })
-      .call(force.drag);
-
-    labelEnter
-      .append("div")
-      .attr("class", "g-name")
-      .text(function (d) {
-        return d.name;
-      });
-
-    labelEnter.append("div").attr("class", "g-value");
-
-    label
-      .style("font-size", function (d) {
-        return Math.max(8, d.r / 2) + "px";
-      })
-      .style("width", function (d) {
-        return d.r * 2.5 + "px";
-      });
-
-    // Create a temporary span to compute the true text width.
-    label
-      .append("span")
-      .text(function (d) {
-        return d.name;
-      })
-      .each(function (d) {
-        d.dx = Math.max(d.r * 2.5, this.getBoundingClientRect().width);
-      })
-      .remove();
-
-    label
-      .style("width", function (d) {
-        return d.dx + "px";
-      })
-      .select(".g-value")
-      .text(function (d) {
-        return formatShortCount(d.left) + " - " + formatShortCount(d.right);
-      });
-
-    // Compute the height of labels when wrapped.
-    label.each(function (d) {
-      d.dy = this.getBoundingClientRect().height;
-    });
-  }
-
-  function tick(e) {
-    node
-      .each(bias(e.alpha * 105))
-      .each(collide(0.1))
-      .attr("transform", function (d) {
-        return "translate(" + d.x + "," + d.y + ")";
-      });
-
-    label
-      .style("left", function (d) {
-        return d.x - d.dx / 2 + "px";
-      })
-      .style("top", function (d) {
-        return d.y - d.dy / 2 + "px";
-      });
-
-    arrow.style("stroke-opacity", function (d) {
-      var dx = d.x - d.cx,
-        dy = d.y - d.cy;
-      return dx * dx + dy * dy < d.r * d.r ? 1 : 0;
-    });
-  }
-
-  // A left-right bias causing topics to orient by party preference.
-  function bias(alpha) {
-    return function (d) {
-      d.x += d.bias * alpha;
-    };
-  }
-
-  // Resolve collisions between nodes.
-  function collide(alpha) {
-    var q = d3.geom.quadtree(data.display);
-    return function (d) {
-      var r = d.cr + maxRadius + collisionPadding,
-        nx1 = d.x - r,
-        nx2 = d.x + r,
-        ny1 = d.y - r,
-        ny2 = d.y + r;
-      q.visit(function (quad, x1, y1, x2, y2) {
-        if (
-          quad.point &&
-          quad.point !== d &&
-          d.other !== quad.point &&
-          d !== quad.point.other
-        ) {
-          var x = d.x - quad.point.x,
-            y = d.y - quad.point.y,
-            l = Math.sqrt(x * x + y * y),
-            r = d.cr + quad.point.r + collisionPadding;
-          if (l < r) {
-            l = ((l - r) / l) * alpha;
-            d.x -= x *= l;
-            d.y -= y *= l;
-            quad.point.x += x;
-            quad.point.y += y;
-          }
-        }
-        return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
-      });
-    };
-  }
-
-  // Given two quantities a and b, returns the fraction to split the circle a + b.
-  function fraction(a, b) {
-    var k = a / (a + b);
-    if (k > 0 && k < 1) {
-      var t0,
-        t1 = Math.pow(12 * k * Math.PI, 1 / 3);
-      for (var i = 0; i < 10; ++i) {
-        // Solve for theta numerically.
-        t0 = t1;
-        t1 =
-          (Math.sin(t0) - t0 * Math.cos(t0) + 2 * k * Math.PI) /
-          (1 - Math.cos(t0));
-      }
-      k = (1 - Math.cos(t1 / 2)) / 2;
-    }
-    return k;
-  }
-
-  // Clear the active topic when clicking on the chart background.
-  function clear() {
-    location.replace("#!");
-  }
-};
-
-showData();
