@@ -3,8 +3,9 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import plotly
-from bson.json_util import dumps
+from bson import json_util
 import json
+from ast import literal_eval
 
 
 app = Flask(__name__)
@@ -20,7 +21,9 @@ mongo = PyMongo(app)
 @app.route("/sentiment")
 def index():
     sentiment = mongo.db.sentiment.find()
-    return render_template("sentiment.html", sentiment = sentiment)
+    page_sanitized = json.loads(json_util.dumps(sentiment))
+    test = json.dumps(page_sanitized, separators=(',', ':'))
+    return render_template("sentiment.html", sentiment = test)
 
 
 if __name__ == "__main__":

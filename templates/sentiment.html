@@ -5,11 +5,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <title>Pro3 News</title>
 </head>
 
 <body class="hold-transition sidebar-mini">
-    <!-- <div>
+    <!-- <div id="">
         {% for data in sentiment %}
         {{data}}
         <h3>{{data.newspaper}}</h3>
@@ -17,14 +22,46 @@
         <p>{{data.sentiment}}</p>
         <p>{{data.title}}</p>
 
-        {% endfor %}
-    </div> -->
-    <div id="myDiv"></div>
+        {% endfor %} -->
+
+        <div class="card">
+            <div class="card-header">
+              Coronavirus Weekly Sentiment
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                  <p> This scatter plot shows the sentiment in various newspapers biweekly starting from January 2020 </p>
+                <div id="senti"></div>
+                <footer class="blockquote-footer"></footer>
+              </blockquote>
+            </div>
+          </div>
+
+
+    <div class="card">
+        <div class="card-header">
+          Coronavirus Sentiment
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+              <p> This scatter plot represents the sentiment in various newspapers starting from January 2020 </p>
+            <div id="myDiv"></div>
+            <footer class="blockquote-footer"></footer>
+          </blockquote>
+        </div>
+      </div>
     
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script>var data = '{{sentiment}}'
+    <!-- <script>var data = '{{sentiment}}'
+    console.warn(data)
+
+    
+    </script> -->
+    <script>
+        var realData = '{{ sentiment | tojson | safe}}'
     </script>
+    
     <script src='static\js\sentiment.js'></script>
 </body>
 
