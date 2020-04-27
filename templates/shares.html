@@ -2,22 +2,47 @@
 <html lang="en">
   
 <head>
-  <meta charset="utf-8">
+  <meta content="utf-8" http-equiv="encoding">
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Pro3 News</title>
 </head>
 <body class="hold-transition sidebar-mini">
 
-  <div>
-    {% for newspaper in shares %}
-      <h3>{{newspaper.newspaper}}</h3>
-      <h3>{{newspaper.date}}</h3>
-      <h3>{{newspaper.url}}</h3>
-      <h3>{{newspaper.title}}</h3>
-      <h3>{{newspaper.shares}}</h3>
-    {% endfor %}
-    
+  <h1>Select a Date</h1>
+  <form action="/action_page.php">
+    <label for="weekday">Date:</label>
+    <input type="date" id="weekday" name="weekday">
+    <input type="submit" value='{{request.form.weekday}}'>
+  </form>
+  
+  <div class='container' style='width: 90%;'>
+    <canvas id="newsChart" width="400" height="275"></canvas>
   </div>
-  <script>var data = '{{shares}}'</script>
-  <script src = 'static\js\shares.js'></script>
+  <div class = 'container'>
+
+  <div class='container'>
+      {% for data in popNews %}
+        {{data.newspaper}}
+        {{data.date}}
+        {{data.url}}
+        {{data.title}}
+        {{data.shares}}
+      {% endfor %}
+  </div>  
+ 
+</div>  
+  <!--<script var data = '{{popNews}}'></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script script type="text/javascript" src = "../static/js/shares.js" charset="utf-8"></script>
 </body>
 </html>
