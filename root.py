@@ -19,12 +19,44 @@ mongo = PyMongo(app)
 #post_id1 = ObjectId("5ea0ea2fab861eda980a0509")
 
 
-@app.route("/intraDay_stock_data")
+@app.route("/home.html")
 def index():
     intraDayCollections = mongo.db.intraDay_stock_data.find()
     for item in intraDayCollections:
         print(intraDayCollections)
+    return render_template("home.html", IDC=intraDayCollections)
+
+
+@app.route("/stocks2.html")
+def story():
+    intraDayCollections = mongo.db.intraDay_stock_data.find()
+    for item in intraDayCollections:
+        print(intraDayCollections)
     return render_template("stocks2.html", IDC=intraDayCollections)
+
+
+@app.route("/sentiment.html")
+def sentiment():
+    sentiment = mongo.db.sentiment.find()
+    page_sanitized = json.loads(json_util.dumps(sentiment))
+    test = json.dumps(page_sanitized, separators=(',', ':'))
+    return render_template("sentiment.html", sentiment=test)
+
+
+@app.route("/shares.html")
+def shares():
+    sentiment = mongo.db.sentiment.find()
+    page_sanitized = json.loads(json_util.dumps(sentiment))
+    test = json.dumps(page_sanitized, separators=(',', ':'))
+    return render_template("shares.html", sentiment=test)
+
+
+@app.route("/index2.html")
+def words():
+    sentiment = mongo.db.sentiment.find()
+    page_sanitized = json.loads(json_util.dumps(sentiment))
+    test = json.dumps(page_sanitized, separators=(',', ':'))
+    return render_template("index2.html", sentiment=test)
 
 # @app.route("/intraDay_stocks_SP")
 # def index2():
