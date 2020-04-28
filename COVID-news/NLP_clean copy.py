@@ -51,7 +51,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "newsapi = NewsApiClient(api_key='f513e29c94b844758f79311e9e081927')\n",
+    "newsapi = NewsApiClient(api_key='')\n",
     "\n",
     "all_articles = newsapi.get_everything(q='Coronavirus', \n",
     "                                      sources= 'msnbc',\n",

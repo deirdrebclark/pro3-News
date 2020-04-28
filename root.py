@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, jsonify, request
 from flask_pymongo import PyMongo
-import json, response
+import json
 from json import dumps
 from bson import json_util
 
@@ -45,7 +45,7 @@ def sentiment():
     return render_template("sentiment.html", sentiment=test)
 
 
-@app.route('/shares.html', methods=['GET','POST'])
+@app.route('/shares.html', methods=['GET', 'POST'])
 def news_shares():
     print('inside news shares')
     if request.method == "POST":
@@ -57,17 +57,18 @@ def news_shares():
 
     if request.method == 'GET':
         newspapers = mongo.db.shares.find()
-        return render_template('shares.html', popNews = newspapers) 
+        return render_template('shares.html', popNews=newspapers)
+
 
 @app.route('/action_page.php')
 def form_post():
-    return redirect('/shares.html') 
+    return redirect('/shares.html')
 
 
 @app.route("/index2.html")
 def words():
     data = 'templates/data.js'
-    return render_template('index2.html', data = data)
+    return render_template('index2.html', data=data)
 
 
 if __name__ == "__main__":

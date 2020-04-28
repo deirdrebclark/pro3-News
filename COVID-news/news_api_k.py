@@ -1,6 +1,0 @@
-API_Key='f513e29c94b844758f79311e9e081927'
-
-shared_api='adbda1aa10ad2915220a79debe18f1c73093688a'
-
-rapid_api='b9297b332bmshd145b94c59505f0p1a438cjsn3dc7ab324c32'
-

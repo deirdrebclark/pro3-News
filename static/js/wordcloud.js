@@ -167,7 +167,9 @@ var WordCloud = function WordCloud() {
     }
   };
   React.useEffect(function () {
-    fetch("https://secantsquared.github.io/democomponent/data.json")
+    fetch(
+      "https://raw.githubusercontent.com/heathersaul-nos3lf/heathersaul-nos3lf.github.io/master/wordcloudimages.json"
+    )
       .then(function (res) {
         return res.json();
       })
