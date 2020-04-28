@@ -26,26 +26,16 @@ def news_shares():
             return weekday
             print("Input")
             print(weekday)
-    # Pull the newspaper facebook shares
+
     if request.method == 'GET':
         
         newspapers = mongo.db.shares.find()
-        #return redirect('/shares_data')
+
         return render_template('shares.html', popNews = newspapers) 
-        #newspapers = list(mongo.db.shares.find())
-        #newspaper = json.dumps(newspapers)
-        #shares = [json.dumps(newspaper, default=json_util.default) for newspaper in Cursor]
-        
-        
-#@app.route('/shares_data')
-#def shares_data():
 
         
-        #return json.dumps(newspapers, default=json_util.default)
-        #news = json.dumps(newspapers, default=json_util.default)
-        #return shares
-  
-        #return jsonify(shares=news)
+        
+
 
 
 @app.route('/action_page.php')

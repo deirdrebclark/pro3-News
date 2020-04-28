@@ -1,6 +1,8 @@
-from flask import Flask, render_template, redirect, jsonify
+from flask import Flask, render_template, redirect, jsonify, request
 from flask_pymongo import PyMongo
-import json
+import json, response
+from json import dumps
+from bson import json_util
 
 app = Flask(__name__)
 
@@ -43,48 +45,29 @@ def sentiment():
     return render_template("sentiment.html", sentiment=test)
 
 
-@app.route("/shares.html")
-def shares():
-    sentiment = mongo.db.sentiment.find()
-    page_sanitized = json.loads(json_util.dumps(sentiment))
-    test = json.dumps(page_sanitized, separators=(',', ':'))
-    return render_template("shares.html", sentiment=test)
+@app.route('/shares.html', methods=['GET','POST'])
+def news_shares():
+    print('inside news shares')
+    if request.method == "POST":
+        if request.form['weekday'] > "":
+            weekday = request.form['weekday']
+            return weekday
+            print("Input")
+            print(weekday)
+
+    if request.method == 'GET':
+        newspapers = mongo.db.shares.find()
+        return render_template('shares.html', popNews = newspapers) 
+
+@app.route('/action_page.php')
+def form_post():
+    return redirect('/shares.html') 
 
 
 @app.route("/index2.html")
 def words():
-    sentiment = mongo.db.sentiment.find()
-    page_sanitized = json.loads(json_util.dumps(sentiment))
-    test = json.dumps(page_sanitized, separators=(',', ':'))
-    return render_template("index2.html", sentiment=test)
-
-# @app.route("/intraDay_stocks_SP")
-# def index2():
-#     intraDayCollections = mongo.db.intraDay_stock_data.find_one({"_id": ObjectId("5ea0ea2fab861eda980a050b")})
-#     return render_template("index.html", IDC_SP=intraDayCollections)
-
-# @app.route("/intraDay_stocks_DOW")
-# def index2():
-#     intraDayCollections = mongo.db.intraDay_stock_data.find_one({"_id": ObjectId("5ea0ea2fab861eda980a050b")})
-#     return render_template("index.html", IDC_DOW=intraDayCollectionsDOW)
-
-
-# @app.route("/daily_stocks")
-# def index():
-#     dailyCollections = mongo.db.daily_stock_data.find()
-#     return render_template("stocks.html", DC=dailyCollections)
-
-
-# @app.route("/weekly_stocks")
-# def index():
-#     weeklyCollections = mongo.db.weekly_stock_data.find()
-#     return render_template("stocks.html", WC=weeklyCollections)
-
-
-# @app.route("/monthly_stocks")
-# def index():
-#     monthlyCollections = mongo.db.daily_stock_data.find()
-#     return render_template("stocks.html", MC=monthlyCollections)
+    data = 'templates/data.js'
+    return render_template('index2.html', data = data)
 
 
 if __name__ == "__main__":
