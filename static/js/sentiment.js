@@ -1,5 +1,5 @@
 // using jquery to load external json data
-$.getJSON('/static/senti-dummyData.json', function (data) {
+$.getJSON('static/js/senti-dummyData.json', function (data) {
     var coronaSenti = data;
     let dates = [];
     let sentiments = [];
@@ -23,6 +23,7 @@ $.getJSON('/static/senti-dummyData.json', function (data) {
             return week(new Date(d.date));
         })
         .entries(coronaSenti);
+        console.warn(byWeek)
 
     // total number of weeks
     let numOfWeeks = byWeek.length;
