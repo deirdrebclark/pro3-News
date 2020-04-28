@@ -59,7 +59,7 @@
    ],
    "source": [
     "from eventregistry import *\n",
-    "er = EventRegistry(apiKey = '33bbd245-d081-4083-aea8-aae044547b59' )\n",
+    "er = EventRegistry(apiKey = '' )\n",
     "q = QueryArticles(\n",
     "    dateStart = datetime.date(2020, 3, 9), dateEnd = datetime.date(2020, 3, 15),\n",
     "    conceptUri = er.getConceptUri(\"Coronavirus\"),\n",
