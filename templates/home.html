@@ -23,7 +23,7 @@
           <div class="row">
             <div class="col-md-12 jumbotron text-center">
               <h1>Event Dashboard: Coronavirus</h1>
-              <p>An NLP exploration of Coronavirus news data and stock market behavior</p>
+              <p>An NLP exploration of Coronavirus news data 1/6/2020-4/12/2020</p>
             </div>
           </div>
    
@@ -51,21 +51,22 @@
         <br>
         <h5><b>Acknowledgements: </b>Ryan Boris, Richa Prakash, Earnest Long Jr., Guga Gogia, Lasha Kalandadze</h5>
         <br>
-        <h5><b>Data Sources: </b><a href="eventregistry.org">EventRegistry (news),</a><a href="https://www.alphavantage.co"> Alpha Vantage (stocks)</a></h5>
+        <h5><b>Data Sources: </b><a href="eventregistry.org">EventRegistry</a>
+        <br>
         <br>
         <h5><b>Data extraction, organization, and cleaning:</b> Python, Pandas, Newspaper, NLTK, WordCloud, TextBlob, Excel</h5>
         <br>
-        <h5><b>Visualization: </b>HTML, CSS, Bootstrap, JavaScript, D3, Vega-Lite, React, Flask</h5>
+        <h5><b>Visualization: </b>HTML, CSS, Bootstrap, JavaScript, D3, Plotly, React, Flask</h5>
         <br>
         <h5><b>Database: </b>MongoDB</h5>
         <br>
-        <h5><b>Data Set: </b>Text analysis in this project is based on news articles from Fox News, Breitbart, The New York Times, The Guardian, MarketWatch, Business Insider, The Financial Times, Reuters, and The Wall Street Journal. The articles selected for our dataset were, for each news source, the top 25 most shared articles per week on Facebook concerning Coronavirus from 1/6/2020-4/12/2020. Stock data includes the open, high, low, close, and volume for the S&P 500 and the Dow Jones Industrial over the same period.
+        <h5><b>Data Set: </b>Text analysis in this project is based on news articles from Fox News, Breitbart, The New York Times, The Guardian, MarketWatch, Business Insider, The Financial Times, Reuters, and The Wall Street Journal. The articles selected for our dataset were, for each news source, the top 25 most shared articles per week on Facebook concerning Coronavirus from January 6th, 2020 to April 12th, 2020.
         </h5>
         <br>
-        <h5><b>Methods: </b>Our team used natural language processing in Python to look at potential associations between standard news outlet coverage of Coronavirus and stock market behavior. Using NLP methods, keywords were pulled for 2700+ articles. Keyword frequencies were then used to build visualizations. EventRegistry includes text sentiment scores in their API and shares metrics for Facebook. The sentiment scores and shares metrics for the articles were charted for potential associations with stock market behavior. Stock data was pulled from the API and charted to match the specifications of this project.  
+        <h5><b>Methods: </b>Our team used natural language processing in Python to explore news media coverage of Coronavirus as it changed over time, and between different news sources. Using NLP methods, keywords were pulled for 2700+ articles. Keyword frequencies were then used to build visualizations. EventRegistry includes text sentiment scores in their API and shares metrics for Facebook. The sentiment scores and shares metrics for the articles were charted to provide more information about the popularity and tone of the articles. 
         </h5>
         <br>
-        <h5><b>Website: </b>The website allows users to interact with dashboard elements that presents stock market behavior juxtaposed with text analysis of news sources. The news media analysis paints a global picture for users who are interested in looking at possible associations between news coverage and stock market behavior.
+        <h5><b>Website: </b>The website allows users to interact with visualizations that present different aspects of NLP analysis. "The Weekly Story" allows users to choose a date and a source to look at 95+ weekly word clouds, comparing story arcs across time and between news sources. "The Weekly Mood" provides two plots of the sentiment scores of the articles. The first is generated on averages, the second plots every article in the dataset. "The Talk of the Town" allows users to investigate the dataset by date and provides shares metrics for the articles. "Who Said It?" is an interactive graphic that allows users to compare keyword frequencies across news sources for the articles in the dataset over the entire ~4 month period. 
         </h5>
         <br>
         <h5><b>Github link: </b><a href="https://github.com/deirdrebclark/pro3-News"> Here </a></h5>          
