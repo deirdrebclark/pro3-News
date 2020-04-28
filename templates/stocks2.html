@@ -12,8 +12,9 @@
       crossorigin="anonymous"
     />
     <style>
-      img {
-        max-width: 50%;
+      .App {
+        display: flex;
+        flex-flow: column nowrap;
       }
     </style>
   </head>
@@ -44,19 +45,37 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="home.html">Home</a>
             <a class="nav-item nav-link" href="stocks.html">The Weekly Story</a>
             <a class="nav-item nav-link" href="sentiment2.html"
               >The Weekly Mood</a
             >
             <a class="nav-item nav-link" href="shares.html">Talk of the Week</a>
-            <a class="nav-item nav-link" href="index2.html">Who Said It?</a>
+            <a class="nav-item nav-link" href="index.html">Who Said It?</a>
           </div>
         </div>
       </nav>
 
-      <div id="wordcloud"></div>
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <div id="wordcloud"></div>
+        </div>
+      </div>
+      {% for date in IDC %}
+
+      <div>
+        <h3>{{date.open}}</h3>
+        <h3>{{date.high}}</h3>
+        <h3>{{IDC.low}}</h3>
+        <h3>{{IDC.close}}</h3>
+        <h3>{{IDC.volume}}</h3>
+
+        {% endfor %}
+      </div>
     </div>
+    <script>
+      var data = "{{shares}}";
+    </script>
+    <script src="static/js/stocks.js"></script>
     <script
       src="https://unpkg.com/react@16/umd/react.development.js"
       crossorigin
@@ -65,6 +84,6 @@
       src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
       crossorigin
     ></script>
-    <script src="static/js/wordcloud.js"></script>
+    <script src="{{ url_for('static', filename='js/wordcloud.js') }}"></script>
   </body>
 </html>
