@@ -15,7 +15,10 @@
           img { 
             max-width: 50%;
           } 
+          body { width: 100vw; height: auto;}
         </style>
+        </head>
+        <body>
         <div class="container">
           <div class="row">
             <div class="col-md-12 jumbotron text-center">
@@ -23,9 +26,9 @@
               <p>An NLP exploration of Coronavirus news data and stock market behavior</p>
             </div>
           </div>
-      </head>
+   
       
-      <body>
+     
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Explore</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +37,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                 <a class="nav-item nav-link" href="home.html">Home</a>
-                <a class="nav-item nav-link" href="stocks.html">The Weekly Story</a>
+                <a class="nav-item nav-link" href="stocks2.html">The Weekly Story</a>
                 <a class="nav-item nav-link" href="sentiment2.html">The Weekly Mood</a>
                 <a class="nav-item nav-link" href="shares.html">Talk of the Week</a>
                 <a class="nav-item nav-link" href="index2.html">Who Said It?</a>
@@ -59,7 +62,7 @@
         <h5><b>Data Set: </b>Text analysis in this project is based on news articles from Fox News, Breitbart, The New York Times, The Guardian, MarketWatch, Business Insider, The Financial Times, Reuters, and The Wall Street Journal. The articles selected for our dataset were, for each news source, the top 25 most shared articles per week on Facebook concerning Coronavirus from 1/6/2020-4/12/2020. Stock data includes the open, high, low, close, and volume for the S&P 500 and the Dow Jones Industrial over the same period.
         </h5>
         <br>
-        <h5><b>Methods: </b>Our team used natural language processing in Python to look at potential associations between standard news outlet coverage of Coronavirus and stock market behavior. Using NLP methods, keywords were pulled for 2700+ articles. Keyword frequencies were then used to build visualizations. EventRegistry includes text sentiment scores in their API and shares metrics for Facebook. The sentiment scores and shares mestrics for the articles were charted for potential associations with stock market behavior. Stock data was pulled from the API and charted to match the specifications of this project.  
+        <h5><b>Methods: </b>Our team used natural language processing in Python to look at potential associations between standard news outlet coverage of Coronavirus and stock market behavior. Using NLP methods, keywords were pulled for 2700+ articles. Keyword frequencies were then used to build visualizations. EventRegistry includes text sentiment scores in their API and shares metrics for Facebook. The sentiment scores and shares metrics for the articles were charted for potential associations with stock market behavior. Stock data was pulled from the API and charted to match the specifications of this project.  
         </h5>
         <br>
         <h5><b>Website: </b>The website allows users to interact with dashboard elements that presents stock market behavior juxtaposed with text analysis of news sources. The news media analysis paints a global picture for users who are interested in looking at possible associations between news coverage and stock market behavior.

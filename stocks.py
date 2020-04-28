@@ -18,11 +18,12 @@ mongo = PyMongo(app)
 
 #post_id1 = ObjectId("5ea0ea2fab861eda980a0509")
 
+
 @app.route("/intraDay_stock_data")
 def index():
     intraDayCollections = mongo.db.intraDay_stock_data.find()
-    for item in intraDayCollections:    
-        print (intraDayCollections)
+    for item in intraDayCollections:
+        print(intraDayCollections)
     return render_template("stocks.html", IDC=intraDayCollections)
 
 # @app.route("/intraDay_stocks_SP")
@@ -36,12 +37,10 @@ def index():
 #     return render_template("index.html", IDC_DOW=intraDayCollectionsDOW)
 
 
-
 # @app.route("/daily_stocks")
 # def index():
 #     dailyCollections = mongo.db.daily_stock_data.find()
 #     return render_template("stocks.html", DC=dailyCollections)
-
 
 
 # @app.route("/weekly_stocks")
@@ -54,8 +53,6 @@ def index():
 # def index():
 #     monthlyCollections = mongo.db.daily_stock_data.find()
 #     return render_template("stocks.html", MC=monthlyCollections)
-
-
 
 
 if __name__ == "__main__":
