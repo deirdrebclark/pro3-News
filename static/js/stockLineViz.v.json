@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A basic line chart example.",
+  "width": 500,
+  "height": 200,
+  "padding": 5,
+
+  "signals": [
+    {
+      "name": "interpolate",
+      "value": "linear",
+      "bind": {
+        "input": "select",
+        "options": [
+          "basis",
+          "cardinal",
+          "catmull-rom",
+          "linear",
+          "monotone",
+          "natural",
+          "step",
+          "step-after",
+          "step-before"
+        ]
+      }
+    }
+  ],
+
+  "data": [{
+    "url": "../../COVID-stocks/Stock Data/DailyCovidStocks_SP500.json",
+    "format": {"type": "json", "parse": {"high":"number", "CurrentDate":"date"
+  }}}],
+
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "range": "width",
+      "domain": {"data": "url", "field": "CurrentDate"}
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "range": "height",
+      "nice": true,
+      "zero": true,
+      "domain": {"data": "url", "field": "high"}
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "range": "category",
+      "domain": {"data": "url", "field": "CurrentDate"}
+    }
+  ],
+
+  "axes": [
+    {"orient": "bottom", "scale": "CurrentDate"},
+    {"orient": "left", "scale": "high"}
+  ],
+
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {
+          "name": "series",
+          "data": "url",
+          "groupby": "CurrentDate"
+        }
+      },
+      "marks": [
+        {
+          "type": "line",
+          "from": {"data": "series"},
+          "encode": {
+            "enter": {
+              "x": {"scale": "CurrentDate", "field": "CurrentDate"},
+              "y": {"scale": "high", "field": "high"},
+              "stroke": {"scale": "color", "field": "CurrentDate" },
+              "strokeWidth": {"value": 2}
+            },
+            "update": {
+              "interpolate": {"signal": "interpolate"},
+              "strokeOpacity": {"value": 1}
+            },
+            "hover": {
+              "strokeOpacity": {"value": 0.5}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

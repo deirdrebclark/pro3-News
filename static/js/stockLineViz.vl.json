@@ -1,4 +1,38 @@
 {
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "data": [{
+    "url": "../../COVID-stocks/Stock Data/DailyCovidStocks_SP500.json",
+    "format": {"type": "json", "parse": {"high":"number", "CurrentDate":"date"
+  }}}],
+
+  "mark": {
+    "type": "line",
+    "point": {
+      "filled": false,
+      "fill": "white"
+    }
+  },
+  "encoding": {
+    "x": {
+      "timeUnit": "day",
+      "field": "CurrentDate",
+      "type": "temporal"
+    },
+    "y": {
+      "aggregate": "mean",
+      "field": "high",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "symbol",
+      "type": "nominal"
+    }
+  },
+  "config": {}
+}
+
+{
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "Stock prices of 5 Tech Companies over Time.",
   "data": {
@@ -148,3 +182,12 @@
 
   }
 }
+
+
+
+
+
+
+
+
+
