@@ -1,3 +1,4 @@
+
 // Event to listen for the form button
 d3.selectAll("#filter-btn").on("click", handleClick);
 
@@ -9,45 +10,38 @@ function handleClick() {
   //let filteredData = tableData;
 
   // Filter data to the week
-  if (date) {
+  
     weekday = new Date(date)
-
-    // Get the start of the week and the end
+  
+// Get the start of the week and the end
     const start = dateFns
         .startOfWeek(weekday)
         .toISOString()
         .split("T")[0];
-      const end = dateFns
+    const end = dateFns
         .endOfWeek(weekday)
         .toISOString()
         .split("T")[0];
 
-      const url = "/xyz";
 
-        d3.json(url).then( function (data) {
-          let stories = [];
-          Object.keys(data).forEach(function (item) {
-            stories.push(data[item]);
-            return stories; 
-            });
-          return stories
-        });
+  const url = "/xyz";
 
+  d3.json(url).then(function (data) {
+    let stories = [];
+    Object.keys(data).forEach(function (item) {
+      stories.push(data[item]);
+    });
+    createChart(stories)
+  });
 
-    createChart(stories, start, end);
-
-  }
-};
-
-function createChart(stories, start, end) {
-    // Filter to get the week dates
+function createChart(newsStories) {
+   // Filter to get the week dates
     var reqData = [];
-    for (i = 0; i < stories.length; i++) {
-      if (stories[i].date >= start && stories[i].date <= end) {
-        reqData.push(data[i]);
+    for (i = 0; i < newsStories.length; i++) {
+      if (newsStories[i].date >= start && newsStories[i].date <= end) {
+        reqData.push(newsStories[i]);
       }
     }
-
     var reqBbData = [];
     for (i = 0; i < reqData.length; i++) {
       if (reqData[i].newspaper == "Breitbart") {  
@@ -102,8 +96,7 @@ function createChart(stories, start, end) {
           reqWjData.push(reqData[i]);
       }
     }
-
-      // Create the dates
+       // Create the dates
       var chartDate = addDays(start, 2)
       function addDays(start, days) {
           var result = new Date(start);
@@ -231,5 +224,7 @@ function createChart(stories, start, end) {
       
         }
       });
+    };
 };
+
 
