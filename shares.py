@@ -15,12 +15,18 @@ app.config["MONGO_URI"] = "mongodb://localhost:27017/pro3news"
 mongo = PyMongo(app)
 
 # Set route
+newspapers = mongo.db.shares.find()
+print(newspapers)
 
-data = {}
-@app.route('/shares', methods=['GET','POST'])
+@app.route('/shares.html', methods=['GET','POST'])
 def news_shares():
+    myCursor = mongo.db.shares.find()
+    for story in myCursor:
+        print('{0} {1}'.format(story['newspaper'],story['title']))
+    
     print('inside news shares')
     if request.method == "POST":
+        print('inside post')
         if request.form['weekday'] > "":
             weekday = request.form['weekday']
             return weekday
@@ -28,19 +34,14 @@ def news_shares():
             print(weekday)
 
     if request.method == 'GET':
-        
+        print('inside get')
         newspapers = mongo.db.shares.find()
-
-        return render_template('shares.html', popNews = newspapers) 
-
+        return render_template('shares.html', popNews = newspapers)
         
-        
-
-
 
 @app.route('/action_page.php')
 def form_post():
-    return redirect('/shares') 
+    return redirect('/shares.html') 
 
 
 

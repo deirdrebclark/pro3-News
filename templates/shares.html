@@ -42,37 +42,36 @@
             </div>
           </nav>
 
-  <h1>Select a Date</h1>
-  <form action="/action_page.php">
-    <label for="weekday">Date:</label>
+  <!-- <h1>Select a Date</h1>
+  <form action="/shares.html" method = 'POST'>
+    <label for="dtLabel">Date:</label>
     <input type="date" id="weekday" name="weekday">
-    <input type="submit">
+    <input type="submit" id="submitted" value='submit'>
+  </form>  -->
+  <form>
+    <div class="form-group">
+      <ul class="list-group" id="filters">
+        <li class="filter list-group-item">
+          <label for="date">Enter a Date</label>
+          <input class="form-control" id="datetime" type="date" placeholder="2020-02-11">
+        </li>
+      </ul>
+      <button id="filter-btn" type="button" class="btn btn-default">Submit</button>
+    </div>
   </form>
-  
+
   <div class='container' style='width: 90%; background-color:beige'>
     <canvas id="newsChart" width="400" height="275" style="background-color:beige"></canvas>
   </div>
-  <div class = 'container' >
-  <!--
-  <div class='container'>
-      {% for data in popNews %}
-        {{data.newspaper}}
-        {{data.date}}
-        {{data.url}}
-        {{data.title}}
-        {{data.shares}}
-      {% endfor %}
-  </div>  
--->
-</div>  
-  <!--<script var data = '{{popNews}}'></script>-->
+  
+
+  <!--script var data = '{{popNews}}'></script>-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-  <script src="https://d3js.org/d3.v5.min.js"></script>
+   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <script script type="text/javascript" src = "../static/js/shares.js" charset="utf-8"></script>
 </body>
