@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, jsonify, request
 from flask_pymongo import PyMongo
-import json, response
+import json
 from json import dumps
 from bson import json_util
 from flask_cors import CORS
@@ -30,12 +30,12 @@ def index():
     return render_template("home.html", IDC=intraDayCollections)
 
 
-@app.route("/stocks2.html")
+@app.route("/clouds.html")
 def story():
     intraDayCollections = mongo.db.intraDay_stock_data.find()
     for item in intraDayCollections:
         print(intraDayCollections)
-    return render_template("stocks2.html", IDC=intraDayCollections)
+    return render_template("clouds.html", IDC=intraDayCollections)
 
 
 @app.route("/sentiment.html")
@@ -70,10 +70,10 @@ def share_data():
 def form_post():
     return render_template('/shares.html')  
 
-@app.route("/index2.html")
+@app.route("/bubbles.html")
 def words():
     data = 'templates/data.js'
-    return render_template('index2.html', data=data)
+    return render_template('bubbles.html', data=data)
 
 
 if __name__ == "__main__":
