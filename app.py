@@ -3,7 +3,7 @@ from flask_pymongo import PyMongo
 import json
 from json import dumps
 from bson import json_util
-from flask_cors import CORS
+
 
 app = Flask(__name__)
 
