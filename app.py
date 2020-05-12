@@ -4,6 +4,7 @@ import json
 from json import dumps
 from bson import json_util
 
+
 app = Flask(__name__)
 
 # Use flask_pymongo to set up mongo connection
@@ -29,12 +30,12 @@ def index():
     return render_template("home.html", IDC=intraDayCollections)
 
 
-@app.route("/stocks2.html")
+@app.route("/clouds.html")
 def story():
     intraDayCollections = mongo.db.intraDay_stock_data.find()
     for item in intraDayCollections:
         print(intraDayCollections)
-    return render_template("stocks2.html", IDC=intraDayCollections)
+    return render_template("clouds.html", IDC=intraDayCollections)
 
 
 @app.route("/sentiment.html")
@@ -47,28 +48,32 @@ def sentiment():
 
 @app.route('/shares.html', methods=['GET', 'POST'])
 def news_shares():
-    print('inside news shares')
     if request.method == "POST":
-        if request.form['weekday'] > "":
-            weekday = request.form['weekday']
-            return weekday
-            print("Input")
-            print(weekday)
-
+        weekday = request.form.get('weekday')
+        print(weekday)
+        return render_template('/shares.html', weekday = weekday)
+        
     if request.method == 'GET':
-        newspapers = mongo.db.shares.find()
-        return render_template('shares.html', popNews=newspapers)
+        return render_template('/shares.html')
 
+@app.route('/xyz')
+def share_data():
+    data = list(mongo.db.shares.find())
+    import math
+    for entry in data:
+        if math.isnan(entry['shares']):
+            entry['shares'] = 0
+    js_data = jsonify(json.loads(json_util.dumps(data)))
+    return js_data
 
 @app.route('/action_page.php')
 def form_post():
-    return redirect('/shares.html')
+    return render_template('/shares.html')  
 
-
-@app.route("/index2.html")
+@app.route("/bubbles.html")
 def words():
     data = 'templates/data.js'
-    return render_template('index2.html', data=data)
+    return render_template('bubbles.html', data=data)
 
 
 if __name__ == "__main__":
