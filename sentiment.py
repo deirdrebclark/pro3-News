@@ -17,6 +17,10 @@ mongo = PyMongo(app)
 # Or set inline
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/pro3news")
 
+print('Hello')
+
+sentiment = mongo.db.sentiment.find({})
+print(sentiment)
 
 @app.route("/sentiment")
 def index():
